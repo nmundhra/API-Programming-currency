@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    <title>Currency Converter</title>
+  </head>
+  <body>
+    <h1>World Currencies</h1>
+    <h3>Get Exchange Rate:</h3>
+    <div id="getx">
+      <form id="form">
+        <input id="currency" type="text" name="currency" placeholder="Currency" autofocus>
+        <input type="submit" value="Get Exchange Rate">
+      </form>
+      <br>
+      <div id="result"></div>
+    </div>
+    <br><br>
+
+    <h3>Convert Currency:</h3>
+    <div id="convert">
+      <form id="conrate">
+        <input id="cur1" type="text" name="from" placeholder="From">
+        <input id="cur2" type="text" name="to" placeholder="To">
+        <input id="amt" type="number" name="amount" placeholder="Amount">
+        <input type="submit" value="Convert">
+      </form>
+      <div id="result1"></div>
+    </div>
+    <br><br>
+
+    <h3>Check Historical Rate:</h3>
+    <div id="history">
+      <form id="hist">
+        <input id="symbol" type="text" name="symbol" placeholder="Symbol">
+        <input id="date" type="date" name="date">
+        <input type="submit" value="Get Historical Rate">
+      </form>
+      <div id="result2"></div>
+    </div>
+
+  </body>
+</html>
