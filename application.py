@@ -15,7 +15,7 @@ def convert():
     print("inside convert")
     currency = request.form.get("currency")
     res = requests.get("http://data.fixer.io/api/latest", params={
-        "access_key": "2c06bd70f654ba37a50f864947f87fa2", "symbols": currency})
+        "access_key": "your_access_key", "symbols": currency})
 
     if res.status_code != 200:
         return jsonify({"success": False, "error": "There is an error"})
@@ -43,7 +43,7 @@ def getamount():
     amount = request.form.get("amount")
 
     res = requests.get("http://data.fixer.io/api/convert", params={
-        "access_key": "2c06bd70f654ba37a50f864947f87fa2", "from": from_cur, "to": to_cur, "amount": amount})
+        "access_key": "your_access_key", "from": from_cur, "to": to_cur, "amount": amount})
 
     if res.status_code != 200:
         return jsonify({"success": False, "error": "There is an error."})
@@ -67,7 +67,7 @@ def historydata():
     api_string = "http://data.fixer.io/api/" + todate
 
     res = requests.get(api_string, params={
-        "access_key": "2c06bd70f654ba37a50f864947f87fa2", "symbols": symbol })
+        "access_key": "your_access_key", "symbols": symbol })
 
     if res.status_code != 200:
         return jsonify({"success": False, "error": "There is an error."})
